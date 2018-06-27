@@ -50,7 +50,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.camera.ts.monotonic=0 \
     persist.audio.camcorder.stereo=true \
     persist.camera.preview.ubwc=0 \
-    persist.camera.video.ubwc=0
+    persist.camera.video.ubwc=0 \
+    vendor.camera.aux.packagelist=all
 
 # CNE and DPM
 PRODUCT_PROPERTY_OVERRIDES += \

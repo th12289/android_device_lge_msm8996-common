@@ -25,3 +25,6 @@ allow mm-qcamerad system_data_file:dir w_dir_perms;
 
 #gcamtest3
 allow mm-qcamerad sysfs_graphics:dir { search };
+
+# should be added to prevent cam issues maybe wide
+allow mm-qcamerad sysfs_graphics:dir r_dir_perms;
