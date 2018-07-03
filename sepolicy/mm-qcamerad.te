@@ -10,6 +10,7 @@ allow mm-qcamerad camera_socket:sock_file { create unlink write };
 allow mm-qcamerad camera_socket:sock_file { create unlink };
 
 allow mm-qcamerad sysfs_graphics:file r_file_perms;
+
 #gcamfix
 #allow mm-qcamerad system_server:unix_stream_socket rw_socket_perms;
 #allow mm-qcamerad sensorservice_service:service_manager find;
@@ -27,4 +28,7 @@ allow mm-qcamerad system_data_file:dir w_dir_perms;
 allow mm-qcamerad sysfs_graphics:dir { search };
 
 # should be added to prevent cam issues maybe wide
+# lineage update
+typeattribute mm-qcamerad binder_in_vendor_violators;
+binder_use(mm-qcamerad);
 allow mm-qcamerad sysfs_graphics:dir r_dir_perms;
